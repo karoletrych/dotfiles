@@ -9,8 +9,12 @@ New-Alias -Name d -Value GitAlias-GitDiff -Force -Option AllScope
 
 function GitAlias-GitStashPush { & git stash push -u $args }
 New-Alias -Name gspu -Value GitAlias-GitStashPush -Force -Option AllScope
+
 function GitAlias-GitStashPop { & git stash pop $args }
 New-Alias -Name gspo -Value GitAlias-GitStashPop -Force -Option AllScope
+
+function GitAlias-GitStashApply { & git stash apply $args }
+New-Alias -Name gsa -Value GitAlias-GitStashApply -Force -Option AllScope
 
 function GitAlias-GitStashList { & git stash list --stat $args }
 New-Alias -Name gsl -Value GitAlias-GitStashList -Force -Option AllScope
