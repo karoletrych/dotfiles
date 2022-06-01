@@ -1,0 +1,10 @@
+[user]
+	email = karol.etrych@gmail.com
+	name = Karol Etrych
+[alias]
+	s = status -sb
+	d = diff
+	spu = stash push -u
+	spo = stash pop
+	sl = stash list --stat
+	ch = checkout
