@@ -97,3 +97,57 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 alias g="git"
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
+
+# shift selection
+r-delregion() {
+  if ((REGION_ACTIVE)) then
+     zle kill-region
+  else 
+    local widget_name=$1
+    shift
+    zle $widget_name -- $@
+  fi
+}
+
+r-deselect() {
+  ((REGION_ACTIVE = 0))
+  local widget_name=$1
+  shift
+  zle $widget_name -- $@
+}
+
+r-select() {
+  ((REGION_ACTIVE)) || zle set-mark-command
+  local widget_name=$1
+  shift
+  zle $widget_name -- $@
+}
+
+for key     kcap   seq        mode   widget (
+    sleft   kLFT   $'\e[1;2D' select   backward-char
+    sright  kRIT   $'\e[1;2C' select   forward-char
+    sup     kri    $'\e[1;2A' select   up-line-or-history
+    sdown   kind   $'\e[1;2B' select   down-line-or-history
+
+    left    kcub1  $'\EOD'    deselect backward-char
+    right   kcuf1  $'\EOC'    deselect forward-char
+
+    csleft  x      $'\E[1;6D' select   backward-word
+    csright x      $'\E[1;6C' select   forward-word
+    csend   x      $'\E[1;6F' select   end-of-line
+    cshome  x      $'\E[1;6H' select   beginning-of-line
+
+    cleft   x      $'\E[1;5D' deselect backward-word
+    cright  x      $'\E[1;5C' deselect forward-word
+
+    del     kdch1   $'\E[3~'  delregion delete-char
+    bs      x       $'^?'     delregion backward-delete-char
+
+  ) {
+  eval "key-$key() {
+    r-$mode $widget \$@
+  }"
+  zle -N key-$key
+  bindkey ${terminfo[$kcap]-$seq} key-$key
+}
