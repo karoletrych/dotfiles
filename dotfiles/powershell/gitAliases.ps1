@@ -4,7 +4,7 @@ New-Alias -Name g -Value Call-Git -Force -Option AllScope
 
 function GitAlias-GitStatus { & git status -sb $args }
 New-Alias -Name s -Value GitAlias-GitStatus -Force -Option AllScope
-function GitAlias-GitDiff { & git diff }
+function GitAlias-GitDiff { & git diff $args }
 New-Alias -Name d -Value GitAlias-GitDiff -Force -Option AllScope
 
 function GitAlias-GitStashPush { & git stash push -u $args }
@@ -55,7 +55,7 @@ New-Alias -Name gpl -Value GitAlias-GitPull -Force -Option AllScope
 
 
 
-function GitAlias-GitBranchList { & git branch $args }
+function GitAlias-GitBranchList { & git branch --list -r $args }
 New-Alias -Name gbl -Value GitAlias-GitBranchList -Force -Option AllScope
 function GitAlias-GitRemote { & git remote -v $args }
 New-Alias -Name r -Value GitAlias-GitRemote -Force -Option AllScope
