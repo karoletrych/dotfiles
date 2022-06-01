@@ -6,6 +6,5 @@ yarn
 z
 xclip
 zsh
-
 #optional
 musescore
