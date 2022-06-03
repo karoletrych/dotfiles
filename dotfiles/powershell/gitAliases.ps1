@@ -57,10 +57,11 @@ New-Alias -Name gpl -Value GitAlias-GitPull -Force -Option AllScope
 
 
 
-
-
-function GitAlias-GitBranchList { & git branch --list -r $args }
+function GitAlias-GitBranchList { & git branch --list $args }
 New-Alias -Name gbl -Value GitAlias-GitBranchList -Force -Option AllScope
+
+function GitAlias-GitBranchListRemote { & git branch --list -r $args }
+New-Alias -Name gblr -Value GitAlias-GitBranchList -Force -Option AllScope
 function GitAlias-GitRemote { & git remote -v $args }
 New-Alias -Name r -Value GitAlias-GitRemote -Force -Option AllScope
 
