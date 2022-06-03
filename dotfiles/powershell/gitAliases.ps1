@@ -40,6 +40,9 @@ New-Alias -Name grh -Value GitAlias-GitResetHard -Force -Option AllScope
 function GitAlias-GitCommit { & git commit -ev $args }
 New-Alias -Name gco -Value GitAlias-GitCommit -Force -Option AllScope
 
+function GitAlias-GitCommitMessage { & git commit -m $args }
+New-Alias -Name gcm -Value GitAlias-GitCommitMessage -Force -Option AllScope
+
 function GitAlias-GitAdd { & git add --all $args }
 New-Alias -Name gaa -Value GitAlias-GitAdd -Force -Option AllScope
 
