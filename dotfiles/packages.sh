@@ -8,3 +8,7 @@ xclip
 zsh
 #optional
 musescore
+
+
+#yay
+nvm

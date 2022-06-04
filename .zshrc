@@ -1,5 +1,6 @@
 source ~/.zsh-plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
+export PATH="$PATH:$(yarn global bin)"
 export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="robbyrussell"
@@ -101,3 +102,4 @@ for key     kcap   seq        mode   widget (
 }
 
 . /usr/share/z/z.sh
+source /usr/share/nvm/init-nvm.sh
