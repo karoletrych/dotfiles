@@ -14,3 +14,5 @@ oh-my-posh --init --shell pwsh --config c:\dev\dotfiles\powershell\ohmyposh.json
 
 
 Import-Module ZLocation
+
+Import-Module posh-git
