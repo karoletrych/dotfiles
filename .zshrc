@@ -47,6 +47,10 @@ fi
 alias g="git"
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
+gch() {
+ git checkout "$(git branch --all | fzf | tr -d '[:space:]')"
+}
+
 
 # shift selection
 r-delregion() {
