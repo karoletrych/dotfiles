@@ -1,0 +1,23 @@
+// Place your key bindings in this file to overwrite the defaults
+[
+    {
+        "key": "alt+insert",
+        "command": "explorer.newFile"
+    },
+    {
+        "key": "shift+alt+l",
+        "command": "workbench.files.action.focusFilesExplorer"
+    },
+    {
+        "key": "ctrl+oem_minus",
+        "command": "workbench.action.navigateBack"
+    },
+    {
+        "key": "ctrl+shift+oem_minus",
+        "command": "workbench.action.navigateForward"
+    },
+    {
+        "key": "ctrl+shift+f11",
+        "command": "editor.action.goToTypeDefinition"
+    }
+]
