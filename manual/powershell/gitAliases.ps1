@@ -49,7 +49,13 @@ New-Alias -Name gai -Value GitAlias-GitAdd -Force -Option AllScope
 
 
 function GitAlias-GitTree { & git log --graph --oneline --decorate $args }
-New-Alias -Name t -Value GitAlias-GitTree -Force -Option AllScope
+New-Alias -Name gt -Value GitAlias-GitTree -Force -Option AllScope
+
+
+function GitAlias-GitLog { & git log --oneline $args }
+New-Alias -Name gl -Value GitAlias-GitLog -Force -Option AllScope
+
+
 function GitAlias-GitPush { & git push $args }
 New-Alias -Name gps -Value GitAlias-GitPush -Force -Option AllScope
 function GitAlias-GitPull { & git pull $args }
