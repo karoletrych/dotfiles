@@ -20,9 +20,6 @@ function GitAlias-GitStashList { & git stash list --stat $args }
 New-Alias -Name gsl -Value GitAlias-GitStashList -Force -Option AllScope
 
 
-function GitAlias-GitCheckout { & git checkout $args }
-New-Alias -Name gch -Value GitAlias-GitCheckout -Force -Option AllScope
-
 function GitAlias-GitCheckoutTrack { & git checkout --track $args }
 New-Alias -Name gcht -Value GitAlias-GitCheckoutTrack -Force -Option AllScope
 
@@ -70,3 +67,12 @@ New-Alias -Name r -Value GitAlias-GitRemote -Force -Option AllScope
 
 function GitAlias {get-alias | Where-Object {$_.Definition.StartsWith("GitAlias")}} 
 
+
+function gch {
+ git checkout "$((git branch --all | fzf).Trim())"
+}
+
+function gcht {
+ $name = "$((git branch --all | fzf).Trim())"
+ git checkout -t $name
+}
