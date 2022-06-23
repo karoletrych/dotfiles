@@ -20,10 +20,6 @@ function GitAlias-GitStashList { & git stash list --stat $args }
 New-Alias -Name gsl -Value GitAlias-GitStashList -Force -Option AllScope
 
 
-function GitAlias-GitCheckoutTrack { & git checkout --track $args }
-New-Alias -Name gcht -Value GitAlias-GitCheckoutTrack -Force -Option AllScope
-
-
 function GitAlias-GitFetch { & git fetch $args }
 New-Alias -Name gf -Value GitAlias-GitFetch -Force -Option AllScope
 
