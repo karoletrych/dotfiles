@@ -52,7 +52,7 @@ gch() {
 }
 
 
-# shift selection
+shift selection
 r-delregion() {
   if ((REGION_ACTIVE)) then
      zle kill-region
@@ -107,3 +107,7 @@ for key     kcap   seq        mode   widget (
 
 . /usr/share/z/z.sh
 source /usr/share/nvm/init-nvm.sh
+
+
+bindkey '^[OA' up-line-or-history
+bindkey '^[OB' down-line-or-history
