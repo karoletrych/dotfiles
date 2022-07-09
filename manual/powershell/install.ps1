@@ -2,7 +2,7 @@ set-executionpolicy unrestricted
 
 winget install --id Microsoft.Powershell --source winget
 
-winget install JanDeDobbeleer.OhMyPosh
+Set-ExecutionPolicy Bypass -Scope Process -Force; Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://ohmyposh.dev/install.ps1'))
 
 Install-Module Terminal-Icons -Repository PSGallery
 Install-Module PSReadLine -AllowPrerelease -Force
