@@ -13,7 +13,7 @@ New-Alias -Name gspu -Value GitAlias-GitStashPush -Force -Option AllScope
 function GitAlias-GitStashPop { & git stash pop $args }
 New-Alias -Name gspo -Value GitAlias-GitStashPop -Force -Option AllScope
 
-function GitAlias-GitStashApply { & git stash apply $args }
+function GitAlias-GitStashApply { & git stash apply --index $args }
 New-Alias -Name gsa -Value GitAlias-GitStashApply -Force -Option AllScope
 
 function GitAlias-GitStashList { & git stash list --stat $args }
