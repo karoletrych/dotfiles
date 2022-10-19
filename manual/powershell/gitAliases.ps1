@@ -45,7 +45,7 @@ New-Alias -Name gai -Value GitAlias-GitAdd -Force -Option AllScope
 function GitAlias-GitTree { & git log --graph --oneline --decorate --pretty=format:'%C(yellow)%h|%Cred%ad|%Cblue%an|%Cgreen%d %Creset%s' --date=short $args }
 New-Alias -Name gt -Value GitAlias-GitTree -Force -Option AllScope
 
-function GitAlias-GitLog { & git log --oneline ---pretty=format:'%C(yellow)%h|%Cred%ad|%Cblue%an|%Cgreen%d %Creset%s' --date=short $args }
+function GitAlias-GitLog { & git log --oneline --pretty=format:'%C(yellow)%h|%Cred%ad|%Cblue%an|%Cgreen%d %Creset%s' --date=short $args }
 New-Alias -Name gl -Value GitAlias-GitLog -Force -Option AllScope
 
 function GitAlias-GitPush { & git push $args }
