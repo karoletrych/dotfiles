@@ -7,6 +7,10 @@ New-Alias -Name s -Value GitAlias-GitStatus -Force -Option AllScope
 function GitAlias-GitDiff { & git diff $args }
 New-Alias -Name d -Value GitAlias-GitDiff -Force -Option AllScope
 
+function GitAlias-GitShow { & git show $args }
+New-Alias -Name gs -Value GitAlias-GitShow -Force -Option AllScope
+
+
 function GitAlias-GitStashPush { & git stash push -u $args }
 New-Alias -Name gspu -Value GitAlias-GitStashPush -Force -Option AllScope
 
