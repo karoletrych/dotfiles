@@ -62,6 +62,15 @@ New-Alias -Name gpl -Value GitAlias-GitPull -Force -Option AllScope
 function GitAlias-GitBranchList { & git branch --list $args }
 New-Alias -Name gbl -Value GitAlias-GitBranchList -Force -Option AllScope
 
+
+function AzAlias-CreatePrTax { & az repos pr create -r VSoft_TaxReporting -s (git rev-parse --abbrev-ref HEAD) -t $args }
+New-Alias -Name prt -Value AzAlias-CreatePrTax -Force -Option AllScope
+
+
+function AzAlias-CreatePrSpecific { & az repos pr create -r TaxReportingSpecific -s (git rev-parse --abbrev-ref HEAD) -t $args }
+New-Alias -Name prs -Value AzAlias-CreatePrSpecific -Force -Option AllScope
+
+
 function GitAlias-GitBranchListRemote { & git branch --list -r $args }
 New-Alias -Name gblr -Value GitAlias-GitBranchList -Force -Option AllScope
 function GitAlias-GitRemote { & git remote -v $args }
