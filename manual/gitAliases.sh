@@ -4,7 +4,7 @@ git config --global alias.spu 'stash push -u'
 git config --global alias.spo 'stash pop'
 git config --global alias.sl 'stash list --stat'
 git config --global alias.ch 'checkout'
-
+git config --global alias.m 'merge'
 
 #function GitAlias-GitFetch { & git fetch $args }
 #New-Alias -Name gf -Value GitAlias-GitFetch -Force -Option AllScope
