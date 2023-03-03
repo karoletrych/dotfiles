@@ -7,6 +7,7 @@ git config --global alias.sl 'stash list --stat'
 git config --global alias.ch 'checkout'
 git config --global alias.m 'merge'
 git config --global alias.r 'rebase'
+git config --global alias.f 'fetch --all'
 
 #function GitAlias-GitFetch { & git fetch $args }
 #New-Alias -Name gf -Value GitAlias-GitFetch -Force -Option AllScope
