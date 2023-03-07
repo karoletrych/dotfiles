@@ -1,0 +1,1 @@
+# place this folder content in C:\Users\karol.etrych\AppData\Roaming\Sublime Text 3\Packages\User\
