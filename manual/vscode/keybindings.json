@@ -24,19 +24,39 @@
         "command": "typescript.goToSourceDefinition"
     },
     {
-        "key": "ctrl+alt+left",
+        "key": "ctrl+left",
         "command": "cursorWordPartLeft"
     },
     {
-        "key": "ctrl+shift+alt+left",
+        "key": "ctrl+shift+left",
         "command": "cursorWordPartLeftSelect"
     },
     {
-        "key": "ctrl+alt+right",
+        "key": "ctrl+right",
         "command": "cursorWordPartRight"
     },
     {
-        "key": "ctrl+shift+alt+right",
+        "key": "ctrl+shift+right",
         "command": "cursorWordPartRightSelect"
+    },
+    {
+        "key": "ctrl+left",
+        "command": "-cursorWordLeft",
+        "when": "textInputFocus && !accessibilityModeEnabled"
+    },
+    {
+        "key": "ctrl+shift+left",
+        "command": "-cursorWordLeftSelect",
+        "when": "textInputFocus && !accessibilityModeEnabled"
+    },
+    {
+        "key": "ctrl+right",
+        "command": "-cursorWordEndRight",
+        "when": "textInputFocus && !accessibilityModeEnabled"
+    },
+    {
+        "key": "ctrl+shift+right",
+        "command": "-cursorWordEndRightSelect",
+        "when": "textInputFocus && !accessibilityModeEnabled"
     }
 ]
