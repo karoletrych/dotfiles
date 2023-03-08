@@ -22,5 +22,21 @@
     {
         "key": "ctrl+f12",
         "command": "typescript.goToSourceDefinition"
+    },
+    {
+        "key": "ctrl+alt+left",
+        "command": "cursorWordPartLeft"
+    },
+    {
+        "key": "ctrl+shift+alt+left",
+        "command": "cursorWordPartLeftSelect"
+    },
+    {
+        "key": "ctrl+alt+right",
+        "command": "cursorWordPartRight"
+    },
+    {
+        "key": "ctrl+shift+alt+right",
+        "command": "cursorWordPartRightSelect"
     }
 ]
