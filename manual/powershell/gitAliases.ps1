@@ -63,11 +63,19 @@ function GitAlias-GitBranchList { & git branch --list $args }
 New-Alias -Name gbl -Value GitAlias-GitBranchList -Force -Option AllScope
 
 
-function AzAlias-CreatePrTax { & az repos pr create -r VSoft_TaxReporting -s (git rev-parse --abbrev-ref HEAD) -t $args }
+function AzAlias-CreatePrAmron { & az repos pr create  --auto-complete --squash --repository AMRON --source-branch (git rev-parse --abbrev-ref HEAD) --description (git rev-parse --abbrev-ref HEAD) --target-branch $args[0] --delete-source-branch --work-items $args[1]}
+New-Alias -Name pra -Value AzAlias-CreatePrAmron -Force -Option AllScope
+
+function AzAlias-ReviewPrAmron { & cd C:/R/amroncopy; git fetch --all; git checkout --track "origin/$args"; git pull; rider "c:\R\amroncopy\Amron3\Amron3.sln" }
+New-Alias -Name prrev -Value AzAlias-ReviewPrAmron -Force -Option AllScope
+
+
+
+function AzAlias-CreatePrTax { & az repos pr create -r VSoft_TaxReporting -s (git rev-parse --abbrev-ref HEAD) -t $args --delete-source-branch}
 New-Alias -Name prt -Value AzAlias-CreatePrTax -Force -Option AllScope
 
 
-function AzAlias-CreatePrSpecific { & az repos pr create -r TaxReportingSpecific -s (git rev-parse --abbrev-ref HEAD) -t $args }
+function AzAlias-CreatePrSpecific { & az repos pr create -r TaxReportingSpecific -s (git rev-parse --abbrev-ref HEAD) -t $args --delete-source-branch }
 New-Alias -Name prs -Value AzAlias-CreatePrSpecific -Force -Option AllScope
 
 
@@ -87,3 +95,23 @@ function gcht {
  $name = "$((git branch --all | fzf).Trim())"
  git checkout -t $name
 }
+
+
+function GitAlias-AddCommitPush { &     git add -A;    git commit -m $args;    git push;}
+New-Alias -Name gacp -Value GitAlias-AddCommitPush -Force -Option AllScope
+
+function GitAlias-CommitAmend { & git commit --amend --no-edit }
+New-Alias -Name gca -Value GitAlias-CommitAmend -Force -Option AllScope
+
+function GitAlias-AmendPush { &     git add -A;    git commit --amend --no-edit;    git push --force-with-lease;}
+New-Alias -Name gg -Value GitAlias-AmendPush -Force -Option AllScope
+
+function GitAlias-GitStart { & git stash -u; git checkout dev; git pull; git checkout -b $args; }
+New-Alias -Name gstart -Value GitAlias-GitStart -Force -Option AllScope
+
+
+
+function Alias-Rgf { & rg --files | rg $args}
+New-Alias -Name rgf -Value Alias-Rgf -Force -Option AllScope
+
+
