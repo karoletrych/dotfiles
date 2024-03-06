@@ -91,6 +91,14 @@ function gch {
  git checkout "$((git branch --all | fzf).Trim())"
 }
 
+function gswitch {
+ $branchName = $((git branch --all | fzf).Trim())
+ $stashIndex = $(git stash list | rg $branchName -m 1 | rg "stash@\{(\d+)\}" -or '$1')
+ git stash -u
+ git checkout $branchName
+ git stash apply $stashIndex
+}
+
 function gcht {
  $name = "$((git branch --all | fzf).Trim())"
  git checkout -t $name
