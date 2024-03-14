@@ -63,7 +63,7 @@ function GitAlias-GitBranchList { & git branch --list $args }
 New-Alias -Name gbl -Value GitAlias-GitBranchList -Force -Option AllScope
 
 
-function AzAlias-CreatePrAmron { & az repos pr create  --auto-complete --squash --repository AMRON --source-branch (git rev-parse --abbrev-ref HEAD) --description (git rev-parse --abbrev-ref HEAD) --target-branch $args[0] --delete-source-branch --work-items $args[1]}
+function AzAlias-CreatePrAmron { & az repos pr create  --auto-complete --squash --repository AMRON --source-branch (git rev-parse --abbrev-ref HEAD) --merge-commit-message (git log -1 --pretty=%B) --description "$(git log -1 --pretty=%B) <br>Related work items: #$($args[1])"  --target-branch $args[0] --delete-source-branch --work-items $args[1] }
 New-Alias -Name pra -Value AzAlias-CreatePrAmron -Force -Option AllScope
 
 function AzAlias-ReviewPrAmron { & cd C:/R/amroncopy; git fetch --all; git checkout --track "origin/$args"; git pull; rider "c:\R\amroncopy\Amron3\Amron3.sln" }
@@ -93,8 +93,11 @@ function gch {
 
 function gswitch {
  $branchName = $((git branch --all | fzf).Trim())
- $stashIndex = $(git stash list | rg $branchName -m 1 | rg "stash@\{(\d+)\}" -or '$1')
  git stash -u
+ $stashIndex = $(git stash list | rg $branchName -m 1 | rg "stash@\{(\d+)\}" -or '$1')
+ echo $(git stash list | rg $branchName -m 1)
+ echo $branchName
+ echo $stashIndex
  git checkout $branchName
  git stash apply $stashIndex
 }
