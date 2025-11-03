@@ -1,4 +1,8 @@
 {
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "version": 2,
+  "final_space": true,
+  "console_title_template": "{{ .Shell }} in {{ .Folder }}",
   "blocks": [
     {
       "type": "prompt",
@@ -10,10 +14,10 @@
           "powerline_symbol": "",
           "foreground": "#ffffff",
           "background": "#ff479c",
+          "template": "   {{ .Path }} ",
           "properties": {
-            "prefix": "   ",
+            "folder_separator_icon": "  ",
             "home_icon": "~",
-            "folder_separator_icon": " \uE0b1 ",
             "style": "folder"
           }
         },
@@ -23,15 +27,16 @@
           "powerline_symbol": "",
           "foreground": "#193549",
           "background": "#fffb38",
+          "background_templates": [
+            "{{ if or (.Working.Changed) (.Staging.Changed) }}#ff9248{{ end }}",
+            "{{ if and (gt .Ahead 0) (gt .Behind 0) }}#f26d50{{ end }}",
+            "{{ if gt .Ahead 0 }}#f17c37{{ end }}",
+            "{{ if gt .Behind 0 }}#89d1dc{{ end }}"
+          ],
+          "template": " {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }}  {{ .Working.String }}{{ end }}{{ if and (.Staging.Changed) (.Working.Changed) }} |{{ end }}{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }} ",
           "properties": {
-            "display_stash_count": true,
-            "display_upstream_icon": true,
-            "status_colors_enabled": true,
-            "local_changes_color": "#ff9248",
-            "ahead_and_behind_color": "#f26d50",
-            "behind_color": "#f17c37",
-            "ahead_color": "#89d1dc",
-            "stash_count_icon": "\uF692 "
+            "fetch_stash_count": true,
+            "fetch_upstream_icon": true
           }
         },
         {
@@ -40,9 +45,9 @@
           "powerline_symbol": "",
           "foreground": "#ffffff",
           "background": "#6CA35E",
+          "template": "  {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} ",
           "properties": {
-            "prefix": " \uF898 ",
-            "display_version": true
+            "fetch_version": true
           }
         },
         {
@@ -51,6 +56,7 @@
           "powerline_symbol": "",
           "foreground": "#111111",
           "background": "#ffff66",
+          "template": "  ",
           "properties": {
             "root_icon": ""
           }
@@ -60,26 +66,27 @@
           "style": "diamond",
           "foreground": "#ffffff",
           "background": "#2e9599",
-          "leading_diamond": "",
+          "background_templates": [
+            "{{ if gt .Code 0 }}#f1184c{{ end }}"
+          ],
           "trailing_diamond": "",
+          "template": "<#83769c></> {{ if gt .Code 0 }}{{ else }}{{ end }} ",
           "properties": {
-            "display_exit_code": false,
-            "always_enabled": false,
-            "error_color": "#f1184c",
-            "color_background": true,
-            "prefix": "<#83769c></> "
+            "always_enabled": false
+          }
+        },
+        {
+          "type": "time",
+          "style": "plain",
+          "foreground": "#007ACC",
+          "properties": {
+            "time_format": "15:04:05"
           }
         }
       ]
     },
     {
-      "type": "rprompt",
-      "segments": [
-      ]
+      "type": "rprompt"
     }
-  ],
-  "final_space": true,
-  "console_title": true,
-  "console_title_style": "template",
-  "console_title_template": "{{ .Shell }} in {{ .Folder }}"
+  ]
 }
