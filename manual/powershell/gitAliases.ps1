@@ -40,6 +40,15 @@ New-Alias -Name gco -Value GitAlias-GitCommit -Force -Option AllScope
 function GitAlias-GitCommitMessage { & git commit -m $args }
 New-Alias -Name gcm -Value GitAlias-GitCommitMessage -Force -Option AllScope
 
+
+function GitAlias-GitCommitTemp { & git add --all $args; git commit -m temp }
+New-Alias -Name gct -Value GitAlias-GitCommitTemp -Force -Option AllScope
+
+
+function GitAlias-GitExtensions { & 'C:\Program Files\GitExtensions\GitExtensions.exe' . }
+New-Alias -Name ge -Value GitAlias-GitExtensions -Force -Option AllScope
+
+
 function GitAlias-GitAdd { & git add --all $args }
 New-Alias -Name gaa -Value GitAlias-GitAdd -Force -Option AllScope
 
@@ -63,7 +72,8 @@ function GitAlias-GitBranchList { & git branch --list $args }
 New-Alias -Name gbl -Value GitAlias-GitBranchList -Force -Option AllScope
 
 
-function AzAlias-CreatePrAmron { & az repos pr create  --auto-complete --squash --repository AMRON --source-branch (git rev-parse --abbrev-ref HEAD) --merge-commit-message (git log -1 --pretty=%B) --description "$(git log -1 --pretty=%B) <br>Related work items: #$($args[1])"  --target-branch $args[0] --delete-source-branch --work-items $args[1] }
+function AzAlias-CreatePrAmron { 
+    & az repos pr create  --auto-complete --squash --repository AMRON --source-branch (git rev-parse --abbrev-ref HEAD) --merge-commit-message "$(git log -1 --pretty=%B)" --description "$(git log -1 --pretty=%B) <br>Related work items: #$($args[1])"  --target-branch $args[0] --delete-source-branch --work-items $args[1] }
 New-Alias -Name pra -Value AzAlias-CreatePrAmron -Force -Option AllScope
 
 function AzAlias-ReviewPrAmron { & cd C:/R/amroncopy; git fetch --all; git checkout --track "origin/$args"; git pull; rider "c:\R\amroncopy\Amron3\Amron3.sln" }
@@ -102,6 +112,13 @@ function gswitch {
  git stash apply $stashIndex
 }
 
+
+function gsync {
+ git stash -u;
+ git fetch --all;
+ git rebase "origin/dev";
+}
+
 function gcht {
  $name = "$((git branch --all | fzf).Trim())"
  git checkout -t $name
@@ -116,6 +133,9 @@ New-Alias -Name gca -Value GitAlias-CommitAmend -Force -Option AllScope
 
 function GitAlias-AmendPush { &     git add -A;    git commit --amend --no-edit;    git push --force-with-lease;}
 New-Alias -Name gg -Value GitAlias-AmendPush -Force -Option AllScope
+
+function GitAlias-GitCommitPushMessage { &  git add -A;  git commit -m $args; git push; }
+New-Alias -Name gcm -Value GitAlias-GitCommitMessage -Force -Option AllScope
 
 function GitAlias-GitStart { & git stash -u; git checkout dev; git pull; git checkout -b $args; }
 New-Alias -Name gstart -Value GitAlias-GitStart -Force -Option AllScope
