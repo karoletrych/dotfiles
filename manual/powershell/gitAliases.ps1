@@ -135,7 +135,7 @@ function GitAlias-AmendPush { &     git add -A;    git commit --amend --no-edit;
 New-Alias -Name gg -Value GitAlias-AmendPush -Force -Option AllScope
 
 function GitAlias-GitCommitPushMessage { &  git add -A;  git commit -m $args; git push; }
-New-Alias -Name gcm -Value GitAlias-GitCommitMessage -Force -Option AllScope
+New-Alias -Name gcp -Value GitAlias-GitCommitPushMessage -Force -Option AllScope
 
 function GitAlias-GitStart { & git stash -u; git checkout dev; git pull; git checkout -b $args; }
 New-Alias -Name gstart -Value GitAlias-GitStart -Force -Option AllScope
