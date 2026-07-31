@@ -31,8 +31,8 @@
         "when": "isInDiffEditor"
     },
     {
-        "key": "shift+alt+g",
-        "command": "multiDiffEditor.goToFile",
-        "when": "activeEditor == 'multiDiffEditor'"
+        "key": "ctrl+shift+f11",
+        "command": "editor.action.goToTypeDefinition",
+        "when": "editorTextFocus"
     }
 ]
