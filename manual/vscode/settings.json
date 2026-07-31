@@ -1,21 +1,20 @@
 {
-    "workbench.colorTheme": "Quiet Light",
-    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorTheme": "Catppuccin Macchiato",
+    "workbench.iconTheme": "catppuccin-macchiato",
     "workbench.tree.indent": 12,
-    "material-icon-theme.folders.theme": "specific",
-    "material-icon-theme.folders.associations": {
-        "Domain": "core",
-        "Dictionaries": "database",
-        "WebApi": "api",
-        "Entities": "class",
-        "Enums": "enum",
-        "Errors": "error",
-        "Localization": "i18n",
-        "UnitTests": "test"
+    "catppuccin-icons.associations.folders": {
+        "Domain": "folder_core",
+        "Dictionaries": "folder_database",
+        "WebApi": "folder_api",
+        "Entities": "folder_types",
+        "UnitTests": "folder_tests"
     },
     "workbench.colorCustomizations": {
         "[Quiet Light]": {
             "gitDecoration.ignoredResourceForeground": "#b3b3b3"
+        },
+        "[Catppuccin Macchiato]": {
+            "gitDecoration.ignoredResourceForeground": "#6e738d"
         }
     },
 
