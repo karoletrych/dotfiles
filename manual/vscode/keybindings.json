@@ -19,5 +19,20 @@
     {
         "key": "shift+alt+p",
         "command": "multiDiffEditor.goToPreviousChange"
+    },
+    {
+        "key": "shift+alt+u",
+        "command": "diffEditor.showAllUnchangedRegions",
+        "when": "isInDiffEditor"
+    },
+    {
+        "key": "shift+alt+c",
+        "command": "diffEditor.collapseAllUnchangedRegions",
+        "when": "isInDiffEditor"
+    },
+    {
+        "key": "shift+alt+g",
+        "command": "multiDiffEditor.goToFile",
+        "when": "activeEditor == 'multiDiffEditor'"
     }
 ]

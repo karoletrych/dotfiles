@@ -66,6 +66,7 @@
     "git.blame.statusBarItem.enabled": true,
 
     "dotnet.codeLens.enableReferencesCodeLens": false,
+    "csharp.suppressBuildAssetsNotification": true,
 
     "chat.disableAIFeatures": true,
     "claudeCode.preferredLocation": "panel",
