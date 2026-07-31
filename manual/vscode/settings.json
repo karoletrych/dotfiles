@@ -5,6 +5,7 @@
     "material-icon-theme.folders.theme": "specific",
     "material-icon-theme.folders.associations": {
         "Domain": "core",
+        "Dictionaries": "database",
         "WebApi": "api",
         "Entities": "class",
         "Enums": "enum",
@@ -17,6 +18,12 @@
             "gitDecoration.ignoredResourceForeground": "#b3b3b3"
         }
     },
+
+    "workbench.editor.limit.enabled": true,
+    "workbench.editor.limit.value": 10,
+    "workbench.editor.limit.perEditorGroup": true,
+    "workbench.editor.limit.excludeDirty": true,
+    "workbench.editor.tabSizing": "shrink",
 
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.renderWhitespace": "all",
@@ -75,6 +82,8 @@
         "https://developer.microsoft.com/json-schemas/": true,
         "https://biomejs.dev": true
     },
+
+    "workbench.remoteIndicator.showExtensionRecommendations": false,
 
     "security.workspace.trust.banner": "never",
     "security.workspace.trust.enabled": false,

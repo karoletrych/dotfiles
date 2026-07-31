@@ -7,5 +7,17 @@
     {
         "key": "shift+alt+b",
         "command": "git.blame.toggleEditorDecoration"
+    },
+    {
+        "key": "shift+alt+d",
+        "command": "git.viewChanges"
+    },
+    {
+        "key": "shift+alt+n",
+        "command": "multiDiffEditor.goToNextChange"
+    },
+    {
+        "key": "shift+alt+p",
+        "command": "multiDiffEditor.goToPreviousChange"
     }
 ]
