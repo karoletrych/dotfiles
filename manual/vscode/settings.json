@@ -1,0 +1,82 @@
+{
+    "workbench.colorTheme": "Quiet Light",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.tree.indent": 12,
+    "material-icon-theme.folders.theme": "specific",
+    "material-icon-theme.folders.associations": {
+        "Domain": "core",
+        "WebApi": "api",
+        "Entities": "class",
+        "Enums": "enum",
+        "Errors": "error",
+        "Localization": "i18n",
+        "UnitTests": "test"
+    },
+    "workbench.colorCustomizations": {
+        "[Quiet Light]": {
+            "gitDecoration.ignoredResourceForeground": "#b3b3b3"
+        }
+    },
+
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.renderWhitespace": "all",
+    "editor.defaultFormatter": "biomejs.biome",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.organizeImports.biome": "always",
+        "source.fixAll.biome": "always"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[dockercompose]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2,
+        "editor.autoIndent": "advanced",
+        "editor.quickSuggestions": {
+            "other": true,
+            "comments": false,
+            "strings": true
+        },
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "[github-actions-workflow]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "typescript.updateImportsOnPaste.enabled": false,
+    "files.watcherExclude": {
+        "**/dist/**": true,
+        "**/node_modules/**": true
+    },
+
+    "git.openRepositoryInParentFolders": "always",
+    "git.confirmSync": false,
+    "git.enableSmartCommit": true,
+    "git.blame.editorDecoration.enabled": false,
+    "git.blame.statusBarItem.enabled": true,
+
+    "dotnet.codeLens.enableReferencesCodeLens": false,
+
+    "chat.disableAIFeatures": true,
+    "claudeCode.preferredLocation": "panel",
+
+    "rest-client.previewOption": "exchange",
+    "redhat.telemetry.enabled": false,
+    "json.schemaDownload.trustedDomains": {
+        "https://schemastore.azurewebsites.net/": true,
+        "https://raw.githubusercontent.com/microsoft/vscode/": true,
+        "https://raw.githubusercontent.com/devcontainers/spec/": true,
+        "https://www.schemastore.org/": true,
+        "https://json.schemastore.org/": true,
+        "https://json-schema.org/": true,
+        "https://developer.microsoft.com/json-schemas/": true,
+        "https://biomejs.dev": true
+    },
+
+    "security.workspace.trust.banner": "never",
+    "security.workspace.trust.enabled": false,
+    "extensions.ignoreRecommendations": true
+}

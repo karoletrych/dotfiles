@@ -1,62 +1,11 @@
+// Place your key bindings in this file to override the defaults
 [
     {
-        "key": "alt+insert",
-        "command": "explorer.newFile"
-    },
-    {
         "key": "shift+alt+l",
-        "command": "workbench.files.action.focusFilesExplorer"
+        "command": "workbench.files.action.showActiveFileInExplorer"
     },
     {
-        "key": "ctrl+oem_minus",
-        "command": "workbench.action.navigateBack"
-    },
-    {
-        "key": "ctrl+shift+oem_minus",
-        "command": "workbench.action.navigateForward"
-    },
-    {
-        "key": "ctrl+shift+f11",
-        "command": "editor.action.goToTypeDefinition"
-    },
-    {
-        "key": "ctrl+f12",
-        "command": "typescript.goToSourceDefinition"
-    },
-    {
-        "key": "ctrl+left",
-        "command": "cursorWordPartLeft"
-    },
-    {
-        "key": "ctrl+shift+left",
-        "command": "cursorWordPartLeftSelect"
-    },
-    {
-        "key": "ctrl+right",
-        "command": "cursorWordPartRight"
-    },
-    {
-        "key": "ctrl+shift+right",
-        "command": "cursorWordPartRightSelect"
-    },
-    {
-        "key": "ctrl+left",
-        "command": "-cursorWordLeft",
-        "when": "textInputFocus && !accessibilityModeEnabled"
-    },
-    {
-        "key": "ctrl+shift+left",
-        "command": "-cursorWordLeftSelect",
-        "when": "textInputFocus && !accessibilityModeEnabled"
-    },
-    {
-        "key": "ctrl+right",
-        "command": "-cursorWordEndRight",
-        "when": "textInputFocus && !accessibilityModeEnabled"
-    },
-    {
-        "key": "ctrl+shift+right",
-        "command": "-cursorWordEndRightSelect",
-        "when": "textInputFocus && !accessibilityModeEnabled"
+        "key": "shift+alt+b",
+        "command": "git.blame.toggleEditorDecoration"
     }
 ]

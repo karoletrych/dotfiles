@@ -1,0 +1,9 @@
+anthropic.claude-code
+biomejs.biome
+epolicardo.sql-server-profiler-tool
+humao.rest-client
+ms-dotnettools.csharp
+ms-dotnettools.vscode-dotnet-runtime
+ms-vscode.powershell
+pkief.material-icon-theme
+redhat.vscode-yaml
