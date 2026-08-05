@@ -89,5 +89,5 @@
     "security.workspace.trust.banner": "never",
     "security.workspace.trust.enabled": false,
     "extensions.ignoreRecommendations": true,
-    "diffEditor.renderSideBySide": false
+    "diffEditor.renderSideBySide": true
 }
