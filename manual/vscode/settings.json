@@ -25,6 +25,15 @@
     "workbench.editor.limit.excludeDirty": true,
     "workbench.editor.tabSizing": "shrink",
 
+    "editor.semanticTokenColorCustomizations": {
+        "[Catppuccin Macchiato]": {
+            "rules": {
+                "parameter:csharp": "#cad3f5",
+                "selfKeyword:csharp": "#c6a0f6",
+                "variable.defaultLibrary:csharp": "#cad3f5"
+            }
+        }
+    },
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.renderWhitespace": "all",
     "editor.defaultFormatter": "biomejs.biome",
@@ -62,7 +71,7 @@
     "git.openRepositoryInParentFolders": "always",
     "git.confirmSync": false,
     "git.enableSmartCommit": true,
-    "git.blame.editorDecoration.enabled": false,
+    "git.blame.editorDecoration.enabled": true,
     "git.blame.statusBarItem.enabled": true,
 
     "dotnet.codeLens.enableReferencesCodeLens": false,
