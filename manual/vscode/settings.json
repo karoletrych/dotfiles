@@ -61,6 +61,12 @@
         "editor.defaultFormatter": "redhat.vscode-yaml"
     },
 
+    "vim.handleKeys": {
+        "<C-p>": false,
+        "<C-t>": false,
+        "<C-k>": false
+    },
+
     "javascript.updateImportsOnFileMove.enabled": "always",
     "typescript.updateImportsOnFileMove.enabled": "always",
     "typescript.updateImportsOnPaste.enabled": false,
@@ -99,5 +105,5 @@
     "security.workspace.trust.banner": "never",
     "security.workspace.trust.enabled": false,
     "extensions.ignoreRecommendations": true,
-    "diffEditor.renderSideBySide": true
+    "diffEditor.renderSideBySide": false
 }
