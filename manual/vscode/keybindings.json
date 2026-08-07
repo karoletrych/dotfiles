@@ -39,5 +39,14 @@
         "key": "ctrl+shift+f12",
         "command": "editor.showCallHierarchy",
         "when": "editorHasCallHierarchyProvider && editorTextFocus"
+    },
+    {
+        "key": "shift+f12",
+        "command": "references-view.findReferences",
+        "when": "editorHasReferenceProvider"
+    },
+    {
+        "key": "shift+f12",
+        "command": "-editor.action.goToReferences"
     }
 ]
