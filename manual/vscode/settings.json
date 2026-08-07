@@ -64,7 +64,9 @@
     "vim.handleKeys": {
         "<C-p>": false,
         "<C-t>": false,
-        "<C-k>": false
+        "<C-k>": false,
+        "<C-a>": false,
+        "<C-f>": false
     },
 
     "javascript.updateImportsOnFileMove.enabled": "always",
