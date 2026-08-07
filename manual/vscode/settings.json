@@ -34,6 +34,7 @@
             }
         }
     },
+    "editor.fontFamily": "'JetBrains Mono', 'JetBrainsMono Nerd Font', Consolas, 'Courier New', monospace",
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.renderWhitespace": "all",
     "editor.defaultFormatter": "biomejs.biome",

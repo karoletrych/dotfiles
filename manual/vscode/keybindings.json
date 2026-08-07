@@ -48,5 +48,9 @@
     {
         "key": "shift+f12",
         "command": "-editor.action.goToReferences"
+    },
+    {
+        "key": "ctrl+alt+s",
+        "command": "workbench.action.openSettings"
     }
 ]
