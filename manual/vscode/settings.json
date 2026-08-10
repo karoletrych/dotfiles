@@ -66,7 +66,8 @@
         "<C-t>": false,
         "<C-k>": false,
         "<C-a>": false,
-        "<C-f>": false
+        "<C-f>": false,
+        "<C-q>": false
     },
 
     "javascript.updateImportsOnFileMove.enabled": "always",

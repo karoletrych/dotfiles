@@ -5,6 +5,29 @@
         "command": "workbench.files.action.showActiveFileInExplorer"
     },
     {
+        "key": "ctrl+q ctrl+b",
+        "command": "runCommands",
+        "args": {
+            "commands": [
+                "git.blame.toggleEditorDecoration",
+                "editor.action.selectAll",
+                "editor.action.insertCursorAtEndOfEachLineSelected"
+            ]
+        },
+        "when": "editorTextFocus && !config.git.blame.editorDecoration.enabled"
+    },
+    {
+        "key": "ctrl+q ctrl+b",
+        "command": "runCommands",
+        "args": {
+            "commands": [
+                "editor.action.selectAll",
+                "editor.action.insertCursorAtEndOfEachLineSelected"
+            ]
+        },
+        "when": "editorTextFocus && config.git.blame.editorDecoration.enabled"
+    },
+    {
         "key": "shift+alt+b",
         "command": "git.blame.toggleEditorDecoration"
     },
