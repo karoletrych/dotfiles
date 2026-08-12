@@ -90,7 +90,7 @@
     "chat.disableAIFeatures": true,
     "claudeCode.preferredLocation": "panel",
 
-    "numberedBookmarks.navigateThroughAllFiles": "true",
+    "numberedBookmarks.navigateThroughAllFiles": "replace",
     "numberedBookmarks.gutterIconFillColor": "#a6da95",
     "numberedBookmarks.gutterIconNumberColor": "#181926",
 
