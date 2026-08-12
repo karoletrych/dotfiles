@@ -90,6 +90,10 @@
     "chat.disableAIFeatures": true,
     "claudeCode.preferredLocation": "panel",
 
+    "numberedBookmarks.navigateThroughAllFiles": "true",
+    "numberedBookmarks.gutterIconFillColor": "#a6da95",
+    "numberedBookmarks.gutterIconNumberColor": "#181926",
+
     "rest-client.previewOption": "exchange",
     "redhat.telemetry.enabled": false,
     "json.schemaDownload.trustedDomains": {
