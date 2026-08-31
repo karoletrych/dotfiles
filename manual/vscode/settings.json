@@ -69,6 +69,37 @@
         "<C-f>": false,
         "<C-q>": false
     },
+    "vim.leader": " ",
+    "vim.normalModeKeyBindings": [
+        {
+            "before": ["<leader>", "a"],
+            "commands": ["vscode-harpoon.addEditor"]
+        },
+        {
+            "before": ["<leader>", "e"],
+            "commands": ["vscode-harpoon.editEditors"]
+        },
+        {
+            "before": ["<leader>", "p", "e"],
+            "commands": ["vscode-harpoon.editorQuickPick"]
+        },
+        {
+            "before": ["<leader>", "1"],
+            "commands": ["vscode-harpoon.gotoEditor1"]
+        },
+        {
+            "before": ["<leader>", "2"],
+            "commands": ["vscode-harpoon.gotoEditor2"]
+        },
+        {
+            "before": ["<leader>", "3"],
+            "commands": ["vscode-harpoon.gotoEditor3"]
+        },
+        {
+            "before": ["<leader>", "4"],
+            "commands": ["vscode-harpoon.gotoEditor4"]
+        }
+    ],
 
     "javascript.updateImportsOnFileMove.enabled": "always",
     "typescript.updateImportsOnFileMove.enabled": "always",
@@ -89,10 +120,6 @@
 
     "chat.disableAIFeatures": true,
     "claudeCode.preferredLocation": "panel",
-
-    "numberedBookmarks.navigateThroughAllFiles": "replace",
-    "numberedBookmarks.gutterIconFillColor": "#a6da95",
-    "numberedBookmarks.gutterIconNumberColor": "#181926",
 
     "rest-client.previewOption": "exchange",
     "redhat.telemetry.enabled": false,

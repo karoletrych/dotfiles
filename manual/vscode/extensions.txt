@@ -1,4 +1,3 @@
-alefragnani.numbered-bookmarks
 anthropic.claude-code
 biomejs.biome
 catppuccin.catppuccin-vsc
@@ -8,4 +7,6 @@ ms-dotnettools.csharp
 ms-dotnettools.vscode-dotnet-runtime
 ms-vscode.powershell
 redhat.vscode-yaml
+stuart.unique-window-colors
+tobias-z.vscode-harpoon
 vscodevim.vim
