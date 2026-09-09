@@ -67,7 +67,9 @@
         "<C-k>": false,
         "<C-a>": false,
         "<C-f>": false,
-        "<C-q>": false
+        "<C-q>": false,
+        "<C-s>": false,
+        "<C-z>": false
     },
     "vim.leader": " ",
     "vim.normalModeKeyBindings": [
