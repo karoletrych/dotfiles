@@ -75,5 +75,13 @@
     {
         "key": "ctrl+alt+s",
         "command": "workbench.action.openSettings"
+    },
+    {
+        "key": "ctrl+s",
+        "command": "-extension.vim_ctrl+s"
+    },
+    {
+        "key": "ctrl+s",
+        "command": "workbench.action.files.save"
     }
 ]
