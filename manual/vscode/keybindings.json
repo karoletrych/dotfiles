@@ -83,5 +83,23 @@
     {
         "key": "ctrl+s",
         "command": "workbench.action.files.save"
+    },
+    {
+        "key": "ctrl+z",
+        "command": "-extension.vim_ctrl+z"
+    },
+    {
+        "key": "ctrl+z",
+        "command": "undo",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+y",
+        "command": "-extension.vim_ctrl+y"
+    },
+    {
+        "key": "ctrl+y",
+        "command": "redo",
+        "when": "textInputFocus"
     }
 ]
