@@ -3,7 +3,8 @@
     "bindings": {
       "shift-alt-l": "pane::RevealInProjectPanel",
       "shift-alt-d": "git::Diff",
-      "ctrl-alt-s": "zed::OpenSettings"
+      "ctrl-alt-s": "zed::OpenSettings",
+      "shift-alt-f12": "outline_panel::ToggleFocus"
     }
   },
   {
