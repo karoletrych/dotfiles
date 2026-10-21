@@ -1,0 +1,23 @@
+[
+  {
+    "bindings": {
+      "shift-alt-l": "pane::RevealInProjectPanel",
+      "shift-alt-d": "git::Diff",
+      "ctrl-alt-s": "zed::OpenSettings"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "shift-f12": "editor::FindAllReferences",
+      "ctrl-shift-f11": "editor::GoToTypeDefinition",
+      "ctrl-shift-f12": "call_hierarchy::ShowIncomingCalls",
+      "ctrl-q ctrl-b": "git::Blame",
+      "shift-alt-b": "editor::ToggleGitBlameInline",
+      "shift-alt-n": "editor::GoToHunk",
+      "shift-alt-p": "editor::GoToPreviousHunk",
+      "shift-alt-u": "editor::ExpandAllDiffHunks",
+      "shift-alt-c": "editor::CollapseAllDiffHunks"
+    }
+  }
+]
