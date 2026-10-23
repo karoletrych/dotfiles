@@ -10,6 +10,7 @@
   {
     "context": "Editor",
     "bindings": {
+      "ctrl-t": "project_symbols::Toggle",
       "shift-f12": "editor::FindAllReferences",
       "ctrl-shift-f11": "editor::GoToTypeDefinition",
       "ctrl-shift-f12": "call_hierarchy::ShowIncomingCalls",
