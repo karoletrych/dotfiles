@@ -1,6 +1,6 @@
 {
-    "workbench.colorTheme": "Catppuccin Macchiato",
-    "workbench.iconTheme": "catppuccin-macchiato",
+    "workbench.colorTheme": "Catppuccin Mocha",
+    "workbench.iconTheme": "catppuccin-mocha",
     "workbench.tree.indent": 12,
     "catppuccin-icons.associations.folders": {
         "Domain": "folder_core",
@@ -13,8 +13,8 @@
         "[Quiet Light]": {
             "gitDecoration.ignoredResourceForeground": "#b3b3b3"
         },
-        "[Catppuccin Macchiato]": {
-            "gitDecoration.ignoredResourceForeground": "#6e738d"
+        "[Catppuccin Mocha]": {
+            "gitDecoration.ignoredResourceForeground": "#6c7086"
         }
     },
 
@@ -26,11 +26,11 @@
     "workbench.editor.tabSizing": "shrink",
 
     "editor.semanticTokenColorCustomizations": {
-        "[Catppuccin Macchiato]": {
+        "[Catppuccin Mocha]": {
             "rules": {
-                "parameter:csharp": "#cad3f5",
-                "selfKeyword:csharp": "#c6a0f6",
-                "variable.defaultLibrary:csharp": "#cad3f5"
+                "parameter:csharp": "#cdd6f4",
+                "selfKeyword:csharp": "#cba6f7",
+                "variable.defaultLibrary:csharp": "#cdd6f4"
             }
         }
     },
@@ -142,9 +142,12 @@
     "security.workspace.trust.banner": "never",
     "security.workspace.trust.enabled": false,
     "extensions.ignoreRecommendations": true,
-    "diffEditor.renderSideBySide": true,
+    "diffEditor.renderSideBySide": false,
     "biome.suggestInstallingGlobally": false,
+    "biome.requireConfiguration": true,
     "diffEditor.useInlineViewWhenSpaceIsLimited": true,
     "git.replaceTagsWhenPull": true,
-    "security.promptForLocalFileProtocolHandling": false
+    "security.promptForLocalFileProtocolHandling": false,
+    "claudeCode.allowDangerouslySkipPermissions": true,
+    "claudeCode.hideOnboarding": true
 }
